@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoffeeFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="leF-yg-vUi">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="UeW-gi-wF9"/>
+                                    <constraint firstAttribute="height" constant="400" id="aL3-hb-pwj"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="UeW-gi-wF9"/>
+                                        <exclude reference="aL3-hb-pwj"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="UeW-gi-wF9"/>
+                                        <include reference="aL3-hb-pwj"/>
+                                    </mask>
+                                </variation>
+                            </tableView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="x7l-s7-QhP">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="leF-yg-vUi" secondAttribute="bottom" id="1fc-K2-O5h"/>
+                            <constraint firstItem="x7l-s7-QhP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="2Q4-2c-MYP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="leF-yg-vUi" secondAttribute="trailing" constant="-20" id="EJJ-Tb-Lc0"/>
+                            <constraint firstItem="leF-yg-vUi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="EvI-8e-Rmm"/>
+                            <constraint firstItem="leF-yg-vUi" firstAttribute="top" secondItem="x7l-s7-QhP" secondAttribute="bottom" id="TD9-Xq-OIj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x7l-s7-QhP" secondAttribute="trailing" constant="-20" id="ViE-kZ-Ohd"/>
+                            <constraint firstItem="x7l-s7-QhP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="qRb-Zs-igt"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="leF-yg-vUi"/>
+                                <exclude reference="x7l-s7-QhP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1fc-K2-O5h"/>
+                                <exclude reference="EJJ-Tb-Lc0"/>
+                                <exclude reference="EvI-8e-Rmm"/>
+                                <exclude reference="TD9-Xq-OIj"/>
+                                <exclude reference="2Q4-2c-MYP"/>
+                                <exclude reference="ViE-kZ-Ohd"/>
+                                <exclude reference="qRb-Zs-igt"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="leF-yg-vUi"/>
+                                <include reference="x7l-s7-QhP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1fc-K2-O5h"/>
+                                <include reference="EJJ-Tb-Lc0"/>
+                                <include reference="EvI-8e-Rmm"/>
+                                <include reference="TD9-Xq-OIj"/>
+                                <include reference="2Q4-2c-MYP"/>
+                                <include reference="ViE-kZ-Ohd"/>
+                                <include reference="qRb-Zs-igt"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="x7l-s7-QhP" id="0A4-fH-VJy"/>
+                        <outlet property="tableView" destination="leF-yg-vUi" id="jam-UA-fhH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="378" y="339"/>
+        </scene>
+    </scenes>
+</document>
