@@ -1,0 +1,6 @@
+framework module Pods_CoffeeFinder {
+  umbrella header "Pods-CoffeeFinder-umbrella.h"
+
+  export *
+  module * { export * }
+}
